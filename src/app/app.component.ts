@@ -1,10 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'emastered-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<div>
+              <div>RUNNING STRONG</div>
+              <emastered-fileload title="testing"></emastered-fileload>
+            </div>`,
+  styles: ['']
 })
 export class AppComponent {
-  title = 'emastered';
+  @Input() title = 'something';
+
+  constructor() {}
 }

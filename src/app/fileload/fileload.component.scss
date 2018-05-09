@@ -1,0 +1,43 @@
+.screen1 {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:hover {
+    .browse {
+      .middle {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .outer-circle {
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    position: relative;
+    width: 400px;
+  }
+
+  .browse {
+    bottom: 30px;
+    color: red;
+    display: flex;
+    flex-direction: row;
+    left: 300px;
+    position: absolute;
+
+    .middle {
+      max-width: 0;
+      overflow: hidden;
+      transition: 0.25s ease-in;
+      white-space: nowrap;
+    }
+  }
+}
