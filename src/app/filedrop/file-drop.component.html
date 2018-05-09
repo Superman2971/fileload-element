@@ -1,0 +1,8 @@
+<div
+  id="dropZone"
+  (drop)="filesInput($event)"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)">
+  <input name="file" type="file" accept="audio/*" value="" class="browser-click" (change)="filesInput($event)">
+  <ng-content></ng-content>
+</div>

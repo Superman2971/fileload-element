@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FileloadComponent } from './fileload/fileload.component';
+import { FileDropModule } from './filedrop/file-drop.module';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    FileDropModule
   ],
   declarations: [
     AppComponent,
