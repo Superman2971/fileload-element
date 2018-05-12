@@ -22,6 +22,8 @@ export class FileComponent implements OnDestroy {
   public newFileOver: EventEmitter<any> = new EventEmitter<any>();
   @Output()
   public newFileLeave: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  public newFileInput: EventEmitter<UploadEvent> = new EventEmitter<UploadEvent>();
 
   stack = [];
   files: UploadFile[] = [];
@@ -70,6 +72,7 @@ export class FileComponent implements OnDestroy {
       this.dropFiles(event);
     } else {
       console.log('INPUT FILE', event);
+      this.newFileInput.emit(new UploadEvent(event));
     }
   }
 
